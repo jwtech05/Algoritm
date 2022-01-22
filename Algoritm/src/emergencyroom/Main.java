@@ -12,21 +12,21 @@ class Order{
 
 public class Main {
 	public int solution(int n, int m, int[] er) {
-		int answer=0;
+		int answer = 0;
 		Queue<Order> Q = new LinkedList<>();
 		for(int i=0; i<n; i++) Q.offer(new Order(i, er[i]));
 		while(!Q.isEmpty()) {
 			Order tmp = Q.poll();
-			for(Order x : Q) {
-				if(x.pt > tmp.pt) {
+			for(Order x: Q) {
+				if(tmp.pt < x.pt) {
 					Q.offer(tmp);
-					tmp = null;
+					tmp= null;
 					break;
 				}
 			}
-			if(tmp!=null) {
-				answer++;
-				if(tmp.x==m) return answer;
+			if(tmp != null) {
+				answer ++;
+				if(tmp.x == m) return answer;
 			}
 		}
 		return answer;
