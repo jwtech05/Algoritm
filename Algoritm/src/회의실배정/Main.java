@@ -13,7 +13,7 @@ class Time implements Comparable<Time>{
 	@Override
 	public int compareTo(Time o) {
 		if(this.e == o.e) return this.s - o.s;
-		else return this.e - o.e;
+		else return this.e - o.e; 
 	}
 }
 
