@@ -1,4 +1,4 @@
-package 효율.최대매출;
+package 효율성.최대매출;
 
 import java.util.*;
 
