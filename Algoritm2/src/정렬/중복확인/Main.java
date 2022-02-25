@@ -6,7 +6,7 @@ public class Main {
 	public String solution(int n, int[] arr) {
 		String answer ="U";
 		Arrays.sort(arr);
-		for(int i=0; i<n; i++) {
+   		for(int i=0; i<n; i++) {
 			if(arr[i] == arr[i+1]) return "D";
 		}
 		return answer;
@@ -20,3 +20,4 @@ public class Main {
 		System.out.print(T.solution(n, arr));
 	}
 }
+ 
